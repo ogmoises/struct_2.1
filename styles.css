@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Comandos do body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Tamanho da imagem do ícone logo */
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+/* Comandos do navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    background: #25b671;
+    color: #fff;    
+    padding: 10px 20px;
+    border-top: 5px solid #25b671;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Display dos links do navbar */
+.navbarLinks {
+    list-style: none;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Cor do texto dos ícones navbar e margem entre eles */
+.navbarLinks a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 5px;
+    font-size: 18px;
+}
+
+/* Espaçamento entre os itens */
+.navbarLinks li {
+    margin-right: 40px; 
+}
+
+.navbarLinks a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+/* Margem das imagens da homepage */
+.homeImagens {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    margin-bottom: 20px;
+}
+
+/* Tamanho das imagens da homepage */
+.homeImagens img {
+    border-radius: 20px;
+    width: 100%;
+    display: block;
+}
+
+.frutas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilos para as imagens dentro do contêiner de frutas */
+.frutas img {
+    max-width: 450px;
+    height: auto; 
+    border-radius: 10px; 
+}
+
+/* Margens dos textos e ícones */
+.section {
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Tamanho da margem dos headers */
+h1 {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Tamanho da margem inferior dos itens */
+p {
+    margin-bottom: 20px;
+}
+
+/* Comandos do Footer */
+footer {
+    text-align: center;
+    background: #25b671;
+    color: #fff;
+    border-top: 20px solid #25b671;
+    margin-top: auto;
+}
+
+/* Tamanho dos titulos */
+#sobre h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Tamanho dos textos */
+#sobre p {
+    font-size: 17px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Estilos para a seção Sobre */
+.sobre-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Configurações dos quadrados da aba sobre */
+.sobre {
+    border: 2px solid #25b671; 
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    max-width: 30%;
+    background-color: #fff;
+}
+
+/* Configurações quando a largura da tela está entre 768 e 1200 */
+@media (max-width: 1200px) {
+    .navbarLinks li {
+        margin-right: 20px;
+    }
+
+    .sobre {
+        max-width: 45%;
+    }
+}
+
+/* Configurações quando a largura da tela é 768 ou menor */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .homeImagens {
+        max-width: 100%;
+    }
+
+    .frutas img {
+        max-width: 100%;
+    }
+
+    .sobre {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
